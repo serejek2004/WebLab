@@ -1,0 +1,40 @@
+body{
+    font-family: 'Gilroy', sans-serif;
+    color: #222222;
+    margin: 0;
+    padding: 0;
+    zoom: 150%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    padding: 0;
+}
+
+.flex__container{
+    display: flex;
+}
+
+.header__container{
+    margin: 0 auto;
+    margin-top: 24px;
+    width: 920px;
+}
+
+.container {
+    width: 920px;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+    color: #73738D;
+}
+
+li{
+    display: block;
+}
+
+p{
+    margin: 0;
+}
