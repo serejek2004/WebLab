@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    
+    <nav>
+        <ul>
+            <li tabindex="0" class="nav__button"><a>Drone shop</a></li>
+            <li tabindex="0" class="nav__button"><a>Upload drone</a></li>
+            <button tabindex="0" class="nav__button " onclick="TotalByPrice()" id = "total__price"> Total Price: 0</button>
+            <button tabindex="0" class="nav__button" onclick="SortDrones()">Sort drone by fly distance</button>
+            <button tabindex="0" class="nav__button" onclick="restore()">Restore</button>
+        </ul>
+        <form id="search">
+            <input type="text" id="search__title" placeholder="Type...">
+            <button type="button" id="searchButton">Search</button>
+        </form>
+    </nav>
+    <div class="content" id="content_id">
+        <ul>
+            <li class="drone">
+                <div class="help_object">
+                    <p id="name">name: </p>
+                    <p id="title">firstDrone</p>
+                </div>   
+                <div class="help_object">
+                    <p id="price_name">price: </p>
+                    <p id="price">800</p>
+                </div>
+                <div class="help_object">
+                    <p id="flyDistance_name">flyDistance: </p>
+                    <p id="flyDistance">800</p>
+                </div>
+                <div class="help_object">
+                    <p id="typeDrone_name">typeDrone: </p>
+                    <p id="typeDrone">battle</p>
+                </div>
+            </li>
+            <li class="drone">
+                <div class="help_object">
+                    <p id="name">name: </p>
+                    <p id="title">firstDrone</p>
+                </div>   
+                <div class="help_object">
+                    <p id="price_name">price: </p>
+                    <p id="price">1800</p>
+                </div>
+                <div class="help_object">
+                    <p id="flyDistance_name">flyDistance: </p>
+                    <p id="flyDistance">1800</p>
+                </div>
+                <div class="help_object">
+                    <p id="typeDrone_name">typeDrone: </p>
+                    <p id="typeDrone">underwater</p>
+                </div>
+            </li>
+            <li class="drone">
+                <div class="help_object">
+                    <p id="name">name: </p>
+                    <p id="title">firstDrone</p>
+                </div>   
+                <div class="help_object">
+                    <p id="price_name">price: </p>
+                    <p id="price">500</p>
+                </div>
+                <div class="help_object">
+                    <p id="flyDistance_name">flyDistance: </p>
+                    <p id="flyDistance">500</p>
+                </div>
+                <div class="help_object">
+                    <p id="typeDrone_name">typeDrone: </p>
+                    <p id="typeDrone">battle</p>
+                </div>
+            </li>
+            <li class="drone">
+                <div class="help_object">
+                    <p id="name">name: </p>
+                    <p id="title">fourthDrone</p>
+                </div>   
+                <div class="help_object">
+                    <p id="price_name">price: </p>
+                    <p id="price">2800</p>
+                </div>
+                <div class="help_object">
+                    <p id="flyDistance_name">flyDistance: </p>
+                    <p id="flyDistance">2800</p>
+                </div>
+                <div class="help_object">
+                    <p id="typeDrone_name">typeDrone: </p>
+                    <p id="typeDrone">delivery</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script src="search-sort-count.js"></script>
+</body>
+
+</html>
