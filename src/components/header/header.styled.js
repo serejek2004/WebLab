@@ -8,8 +8,9 @@ export const HeaderStyle = styled.div`
         display: flex;
         align-items: center;
         margin-top: -5px;
+        color: black;
         p {
-            color: grey;
+            color: black;
             font-size: 20px;
             margin-left: -5px;
         }
@@ -19,19 +20,36 @@ export const HeaderStyle = styled.div`
 export const WrappTheIcon = styled.div`
     display: flex;
     padding: 9px;
+    cursor: pointer;
     > span {
-        font-size: 23px;
+        font-size: 50px;
+        cursor: pointer;
         margin: 0 12px;
     }
 `;
 
-export const Nav = styled.nav`
-    margin-left: 350px;
+export const WrappTheTextIcon = styled.a`
+    a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        font-size: 25px;
 
-    .currentPage {
+        &:active {
+            color: #575757; 
+          }
+    }
+`;
+
+export const Nav = styled.nav`
+    margin-left: 250px;
+
+    .active {
         background-color: white;
         border-radius: 50px; 
         text-align: center; 
+        padding: 5px 10px;
+        
     }
 
     ul {
@@ -47,14 +65,15 @@ export const Nav = styled.nav`
     a {
         text-decoration: none;
         font-size: 20px;
-        font-weight: 400;
-        color: grey;
+        font-weight: bolt;
+        color: #171717;
 
     }
 `;
 
 export const DividingLine = styled.div`
-    background-color: grey;
+    background-color: #474747;
     width: 100%;
     height: 4px;
 `;
+

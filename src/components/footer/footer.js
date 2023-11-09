@@ -27,19 +27,19 @@ const Footer = () => {
                 </div>
                 <SocialIcons>
 
-                    <SocialIconWrapper href="#">
+                    <SocialIconWrapper href="https://www.facebook.com">
                         <FacebookOutlined style={{color: "5890FF"}}/>
                     </SocialIconWrapper>
 
-                    <SocialIconWrapper href="#">
+                    <SocialIconWrapper href="https://twitter.com">
                         <TwitterOutlined style={{color: "#00acee"}}/>
                     </SocialIconWrapper>
                         
-                    <SocialIconWrapper href="#">
+                    <SocialIconWrapper href="https://www.linkedin.com/">
                         <LinkedinOutlined style={{color: "#0e76a8"}}/>
                     </SocialIconWrapper>
                         
-                    <SocialIconWrapper href="#">
+                    <SocialIconWrapper href="https://www.google.com">
                         <GooglePlusOutlined style={{color: "#e33e2b"}}/>
                     </SocialIconWrapper>
     

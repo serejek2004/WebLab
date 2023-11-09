@@ -1,5 +1,4 @@
 import { Card } from "antd";
-import { CardWrapper } from "./item.styled";
 
 const { Meta } = Card;
 

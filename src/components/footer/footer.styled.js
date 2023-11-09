@@ -7,7 +7,7 @@ export const FooterStyle = styled.div`
 `;
 
 export const DividingLine = styled.div`
-    background-color: grey;
+    background-color: #474747;
     width: 100%;
     height: 4px;
     margin-top: 100px;
@@ -40,9 +40,11 @@ export const FooterTextContent = styled.div`
     margin-top: 20px;
     h4 {
         margin: 0;
+        font-size: 25px;
     }
     p {
         width: 300px;
+        font-size: 20px;
         text-align: start;
     }
 `;
@@ -51,6 +53,8 @@ export const FooterLogo = styled.div`
     display: flex;
     padding: 9px;
     align-items: start;
+    margin-right: 100px;
+    cursor: pointer;
     > span {
         font-size: 50px;
         margin: 0, 12px;
@@ -75,7 +79,7 @@ export const SocialIconWrapper = styled.a`
 `;
 
 export const BottomDividingLine = styled.div`
-    background-color: grey;
+    background-color: #474747;
     width: 93%;
     height: 4px;
     margin-top: 40px;
@@ -83,4 +87,5 @@ export const BottomDividingLine = styled.div`
 
 export const Conclusion = styled.div`
     margin-top: 20px;
+    margin-bottom: 20px;
 `;
