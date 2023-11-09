@@ -1,0 +1,104 @@
+body {
+    background-image: url('../images/drone_image.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#droneList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.drone-item {
+    background-color: #bbcfdc96;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(205, 20, 20, 0.1);
+    margin: 10px;
+    width: 300px;
+    padding: 10px;
+}
+
+.modal {
+    position: fixed;
+    left: 40%;
+    top: 25%;
+}
+
+.modal-content {
+    background-color: rgba(69, 148, 200, 0.87);
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    background-color: rgba(255, 255, 255, 0.635);
+    border: 1px solid rgba(0, 0, 0, 0.712);
+    border-radius: 10px;
+}
+
+#button_cancel {
+    background-color: #db3434;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+#button_save {
+    background-color: rgb(74, 202, 74);
+}
+
+#button_delete {
+    background-color: #db3434;
+    margin-left: 127px;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 2px; /* Задаємо ширину рисок (можна змінити за потребою) */
+  background-color: #000; /* Задаємо колір рисок (чорний у цьому прикладі) */
+  z-index: 9999; /* Задаємо зі стеку, щоб риски були поверх іншого контенту */
+}
+
+body::before {
+  left: 65px;
+}
+
+body::after {
+  right: 65px;
+}
