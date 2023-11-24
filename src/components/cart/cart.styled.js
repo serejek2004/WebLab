@@ -56,7 +56,7 @@ export const ToCatalog = styled.a`
 
 export const TotalPrice = styled.p`
   font-size: 35px;
-  margin-top: -180px;
+  margin-top: 0px;
   margin-left: 40%;
   color: #575757;
   p {
@@ -85,7 +85,7 @@ export const DataInfo = styled.div`
   margin-left: 13.5%;
   justify-content: center;
   padding: 20px;
-  margin-top: 200px;
+  margin-top: 20px;
   p {
     font-size: 30px;
     font-weight: bold;
