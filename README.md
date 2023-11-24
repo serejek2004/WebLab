@@ -34,3 +34,7 @@
 Посилання на вітку [тут](https://github.com/serejek2004/WebLab/tree/eighth_lab)
 
 ***
+### Лабораторна робота №9 (Варіант 10)
+Посилання на вітку [тут](https://github.com/serejek2004/WebLab/tree/ninth_lab)
+
+***
