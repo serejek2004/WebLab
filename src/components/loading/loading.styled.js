@@ -10,5 +10,6 @@ export const LoadingCont = styled.div`
   padding: 20px 20px; 
   display: flex;
   align-items: center;
+  border: 2px solid black;
   justify-content: center;
 `

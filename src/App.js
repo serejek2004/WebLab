@@ -11,6 +11,7 @@ import fifth_drone from "./components/icons/fifth_drone.png";
 import sixth_drone from "./components/icons/sixth_drone.png";
 import seventh_drone from "./components/icons/seventh_drone.png";
 import title_drone from "./components/icons/title_photo.png";
+import Cart from './components/cart/cart';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ItemNavigation from './components/itemCard/ItemNavigation';
@@ -67,6 +68,7 @@ function App() {
             <Route path="/" element={<Home cards={dronesCard} />} />
             <Route path="/catalog" element={<Catalog />} />
             <Route path="/product/:productId" element={<ItemNavigation />} />
+            <Route path="/Cart" element={<Cart/>} />
           </Routes>
         </div>
       <Footer />

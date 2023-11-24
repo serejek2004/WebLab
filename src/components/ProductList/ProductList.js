@@ -24,7 +24,7 @@ const ProductList = ({ filter }) => {
         } finally {
           setLoading(false);
         }
-      }, 1000);
+      }, 100);
     };
     fetchData();
   }, [filter]);
