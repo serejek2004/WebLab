@@ -50,7 +50,7 @@ const Cart = () => {
     return (
         <div>
             <CartMain>
-                <div>
+                <div style={{marginTop: '200px'}}>
                     {filteredStadiums.map((drone, index) => (
                         <div key={index}>
                             <DataInfo>
@@ -76,23 +76,23 @@ const Cart = () => {
                             </DataInfo>
                         </div>
                     ))}
+                    <CartButton>
+                    {totalPrice > 0 && (
+                        <TotalPrice>
+                            Total amount: <p>{totalPrice}$</p>
+                        </TotalPrice>
+                    )}
+                    </CartButton>
+                    <div style={{ display: 'flex', justifyContent: 'space-evenly', marginLeft: '-25%'}}>\
+                        <ToCatalog href="/Catalog">To catalog</ToCatalog>
+                        <BuyButton>Continue</BuyButton>
+                    </div>
                 </div>
                 {totalPrice <= 0 && (
                     <p className="Nothing">
                         Cart is empty!
                     </p>
                 )}
-                <CartButton>
-                    {totalPrice > 0 && (
-                        <TotalPrice>
-                            Total amount: <p>{totalPrice}$</p>
-                        </TotalPrice>
-                    )}
-                </CartButton>
-                <div style={{ display: 'flex', justifyContent: 'space-evenly', marginLeft: '-25%'}}>\
-                    <ToCatalog href="/Catalog">To catalog</ToCatalog>
-                    <BuyButton>Continue</BuyButton>
-                </div>
             </CartMain>
         </div>
 
