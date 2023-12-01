@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   SortDrones,
   SelectCategory,
@@ -12,7 +12,7 @@ import {
 const Filter = ({ onFilterChange }) => {
   const options = [
     {
-      title: "All",
+      title: "all",
     },
     {
       title: "Battle",
@@ -23,7 +23,7 @@ const Filter = ({ onFilterChange }) => {
   ];
 
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState("all");
   const [sortByPrice, setSortByPrice] = useState("asc");
 
   const handleSearch = (query) => {
@@ -51,6 +51,7 @@ const Filter = ({ onFilterChange }) => {
           onChange={(e) => handleSearch(e.target.value)}
         />
         <SelectCategory
+          value={selectedCategory}
           onChange={(e) => handleCategoryChange(e.target.value)}>
           {options.map((option, index) => (
             <option key={index} value={option.title}>
@@ -60,7 +61,6 @@ const Filter = ({ onFilterChange }) => {
         </SelectCategory>
         <SortDrones
             onChange={(e) => handleSort(e.target.value)}>
-            <option value="ns">Without sort</option>
             <option value="asc">Ascending</option>
             <option value="desc">Descending</option>
         </SortDrones>

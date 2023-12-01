@@ -68,16 +68,15 @@ export const InputLabels = styled.p`
   width: 600px;
   text-align: start;
   font-weight: bold;
-`;
-
-export const InputField = styled.input`
-  width: 300px;
-  padding: 20px;
-  margin-top: -30px;
-  border: 1px solid #575757;
-  border-radius: 10px;
-  box-shadow: 0px 0px 4px 0px black;
-  margin-right: 50px;
+  .InputField {
+    width: 300px;
+    padding: 20px;
+    margin-top: -30px;
+    border: 1px solid #575757;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px 0px black;
+    margin-right: 50px;
+  }
 `;
 
 export const FootContainer = styled.div`

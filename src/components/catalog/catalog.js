@@ -3,12 +3,11 @@ import Filter from "../filters/filter";
 import ProductList from '../ProductList/ProductList';
 import { CatalogStyle } from './catalog.styled';
 
-const Catalog = ({ products }) => {
-
+const Catalog = () => {
     const [filter, setFilter] = useState({
       searchQuery: '',
-      selectedCategory: 'All',
-      sortByPrice: 'ns',
+      selectedCategory: 'all',
+      sortByPrice: 'asc',
     });
 
     const handleFilter = (Filter) => {
@@ -19,7 +18,6 @@ const Catalog = ({ products }) => {
         <CatalogStyle>
             <Filter onFilterChange={handleFilter} />
             <ProductList
-                    products={products}
                     filter={filter}
                 />
         </CatalogStyle>

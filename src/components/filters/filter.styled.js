@@ -47,7 +47,7 @@ export const Inputs = styled.div`
 export const CatalogOptions = styled.div`
   margin-top: 124px;
   width: 100%;
-  height: 65px;
+  height: 70px;
   position: fixed;
   background-color: white;
 `;

@@ -1,40 +1,39 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ProductCard from '../ProductCard/ProductCard';
 import { ListContainer } from './ProductList.styled';
 import ItemCard from '../itemCard/itemCard';
+import LoadingPage from '../loading/loading';
+import { getDrones } from '../../fetching';
 
-const ProductList = ({ products, filter }) => {
+const ProductList = ({ filter }) => {
+  const [loading, setLoading] = useState(true);
+  const [products, setProducts] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const filterProducts = () => {
-    const { searchQuery, selectedCategory, sortByPrice } = filter;
-  
-    let filteredProducts = [...products];
-  
-    if (searchQuery) {
-      filteredProducts = filteredProducts.filter((product) =>
-        product.title.toLowerCase().includes(searchQuery.toLowerCase())
-      );
-    }
-  
-    if (selectedCategory !== 'All') {
-      filteredProducts = filteredProducts.filter(
-        (product) => product.category.toLowerCase() === selectedCategory.toLowerCase()
-      );
-    }
-  
-    if (sortByPrice === 'asc') {
-      filteredProducts.sort((a, b) => parseInt(a.price) - parseInt(b.price));
-    } 
-    if (sortByPrice === 'desc') {
-      filteredProducts.sort((a, b) => parseInt(b.price) - parseInt(a.price));
-    }
-  
-    return filteredProducts;
-  };
-  
-  const filteredProducts = filterProducts();
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true);
+      setTimeout(async () => {
+        try {
+          const { searchQuery, selectedCategory, sortByPrice } = filter;
+          const response = await getDrones(searchQuery, selectedCategory, sortByPrice);
+          setProducts(response.data.data);
+        } catch (error) {
+          console.error('Error fetching products:', error);
+        } finally {
+          setLoading(false);
+        }
+      }, 100);
+    };
+    fetchData();
+  }, [filter]);
+
+  if (products == null || products === undefined) {
+    return;
+  }
+
+  const filteredProducts = products;
   const handleViewMore = (product) => {
     setSelectedProduct(product);
     setIsModalOpen(true);
@@ -42,12 +41,15 @@ const ProductList = ({ products, filter }) => {
   
   return (
     <ListContainer>
-      {filteredProducts.map((product, index) => (
+      {loading ? (
+        <LoadingPage/>
+      ) : (
+      filteredProducts.map((product, index) => (
         <ProductCard key={index}
           product={product}
           onViewMore={() => handleViewMore(product)}
         />
-      ))}
+      )))}
       {isModalOpen && selectedProduct && typeof selectedProduct === 'object' && (
         <ItemCard
           product={selectedProduct}

@@ -37,15 +37,15 @@ export const ImageWithTextContainer = styled.div`
   padding-top: 10px;
   background-color: lightgrey;
   border: 1px solid black;
-  border-radius: 5px;
+  border-radius: 50px;
   margin-bottom: 100px;
-  height: 500px;
-  width: 400px;
+  height: 450px;
+  width: 350px;
   box-shadow: 0px 0px 8px 0px black
 `;
 
 export const Image = styled.img`
-  max-width: 450px;
+  max-width: 350px;
   height: auto;
 `;
 
@@ -57,7 +57,7 @@ export const TitleImage = styled.img`
 export const Title = styled.p`
   font-size: 20px;
   color: #333;
-  margin-top 10px;
+  margin-top: 10px;
   padding: 0 5px;
   text-align: center;
 `;
